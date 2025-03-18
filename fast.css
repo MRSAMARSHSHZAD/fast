@@ -1,0 +1,1149 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ :root {
+    /* --color: var(--37, 141, 148) */
+}
+
+nav {
+    margin-top: 20px;
+    height: 15%;
+    width: 100%;
+    /* position: relative; */
+    /* background-color: linear-gradient(45deg, rgb(37, 141, 148, 0.5), rgb(7, 102, 117, 0.5)); */
+    /* width: 100%; */
+    background-color: rgb(37, 141, 148);
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    height: 150px;
+    width: 200px;
+    background-color: rgb(7, 102, 117);
+    transform: skew(5deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    margin-left: -150px;
+    margin-top: -20px;
+}
+
+.box svg {
+    height: 50%;
+    width: 50%;
+    /* display: flex;
+    jus
+    align-items: center;
+     */
+}
+
+nav ul {
+    margin-right: 90px;
+    display: flex;
+    overflow-x: hidden;
+    list-style: none;
+    width: 100%;
+    /* gap: px; */
+    height: 100%;
+    /* background-color: blue; */
+    /* gap: 0px; */
+    /* text-decoration: none; */
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    /* margin-top: 40px; */
+    font-size: 18px;
+    font-weight: 600;
+    /* text-decoration: none; */
+    cursor: pointer;
+}
+
+nav ul li a {
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+    width: 100%;
+    animation-name: move;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    height: 20%;
+    width: 100%;
+    left: 5%;
+    /* top: 10; */
+    bottom: -10px;
+}
+
+nav ul li a:hover::after {
+    animation-name: move;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-iteration-count: infinite;
+    background-color: rgb(7, 102, 117);
+}
+
+@keyframes move {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+
+/* navbar is complate */
+
+.content {
+    height: 70%;
+    background: radial-gradient(ellipse at bottom right, rgb(37, 141, 148), #000000);
+    /* background: linear-gradient(ellipse at bottom right, rgb(37, 141, 148), #000000); */
+    /* background-color: rgb(7, 102, 117); */
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop {
+    height: 75%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: linear-gradient(45deg, rgb(37, 141, 148, 0.5), rgb(7, 102, 117, 0.5));
+    /* background-color: blue; */
+    /* background-color: rgb(7, 102, 117); */
+    /* background-color: rgb(37, 141, 148); */
+    width: 45%;
+}
+
+.drop svg {
+    color: #fff;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.drop h1 {
+    font-size: 28px;
+    margin-left: 20px;
+    margin-top: 1rem;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 10px;
+    /* display: inline; */
+}
+
+.drop p {
+    font-size: 16px;
+    line-height: 1.6;
+    display: block;
+    box-shadow: 0 0 0 rgb(37, 141, 148);
+    color: white;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.drop button {
+    padding: 12px 30px;
+    margin-left: 20px;
+    /* height: 15%; */
+    /* width: 25%; */
+    margin-top: 20px;
+    border: none;
+    /* background-color: rgb(7, 102, 117); */
+    color: white;
+    background: radial-gradient(circle, rgb(7, 102, 117) 10%, transparent 40%);
+    background-color: rgb(37, 141, 148);
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.drop button:hover {
+    transform: translatey(-8px);
+    /* transform: translateZ(10px); */
+}
+
+.laptop {
+    height: 75%;
+    background-image: url(https://melbetstratos.com/content_images/OrEsJYtH.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 45%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(7, 102, 117);
+}
+
+
+/* content is complate */
+
+.appliction {
+    height: 80%;
+    /* display: flex; */
+    /* justify-content: center; */
+    border-top: 7px solid rgb(7, 102, 117);
+    border-bottom: 7px solid rgb(7, 102, 117);
+    background-color: rgb(37, 141, 148);
+}
+
+.appliction h1 {
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 60px;
+    /* font-size: 23px; */
+    position: relative;
+}
+
+.appliction h1::after {
+    content: "";
+    position: absolute;
+    height: 10%;
+    width: 5%;
+    background-color: rgb(7, 102, 117);
+    top: 40px;
+    bottom: 0;
+    left: 650px;
+    /* display: flex; */
+}
+
+.skill {
+    height: 75%;
+    background-color: rgb(37, 141, 148);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 40px;
+}
+
+.skill-1 {
+    height: 90%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(37, 141, 148);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background-color: rgb(7, 102, 117);
+    color: #fff;
+}
+
+.real {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 10px; */
+    /* border: 1px solid gray; */
+    border-bottom: 0.3px solid rgb(37, 141, 148);
+    margin-top: 30px;
+    transition: all 0.7s ease-in-out;
+}
+
+.real:hover {
+    transform: translatex(20px);
+    background-color: rgb(37, 141, 148);
+}
+
+.real-2 {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: -25px;
+    /* gap: 40px; */
+    /* border: 2px solid gray; */
+    border-bottom: 0.3px solid rgb(37, 141, 148);
+    /* margin-top: 30px; */
+    transition: all 0.7s ease-in-out;
+}
+
+.real-2:hover {
+    transform: translateX(20px);
+    background-color: rgb(37, 141, 148);
+}
+
+.real-3 {
+    width: 90%;
+    height: 50%;
+    /* border-bottom: 0.3px solid rgb(37, 141, 148); */
+    display: flex;
+    /* border: 2px solid gray; */
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 40px; */
+    margin-left: -35px;
+    /* gap: 40px; */
+    /* margin-top: 30px; */
+    transition: all 0.7s ease-in-out;
+}
+
+.real-3:hover {
+    transform: translateX(20px);
+    background-color: rgb(37, 141, 148);
+}
+
+.skill-2 {
+    height: 90%;
+    width: 40%;
+    background-image: url(https://melbetstratos.com/content_images/AFGIasbQ.jpg);
+    background-position: center;
+    background-size: cover;
+    border: 1px solid rgb(37, 141, 148);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    /* background-color: blue; */
+}
+
+
+/* application is full complate */
+
+aside {
+    height: 220%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 5px solid rgb(7, 102, 117);
+    background-color: rgb(96, 220, 210);
+}
+
+.round {
+    height: 400px;
+    width: 400px;
+    border-radius: 9999px;
+    background-image: url(https://melbetstratos.com/content_images/resnB.jpg);
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-position: center;
+    background-size: cover;
+    background-color: #000000;
+}
+
+.tex {
+    width: 40%;
+}
+
+.tex h3 {
+    font-size: 33px;
+    margin-top: 20px;
+    text-align: center;
+    margin-top: 16px;
+    box-sizing: border-box;
+    width: 90%;
+    align-items: center;
+    font-weight: 400;
+    color: rgb(37, 141, 148);
+}
+
+.tex p {
+    margin-top: 10px;
+    letter-spacing: 0.1px;
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 300;
+    /* line-height: 32px; */
+    text-align: center;
+}
+
+aside button {
+    margin-top: 35px;
+    display: inline;
+    padding: 15px 40px;
+    width: fit-content;
+    border: 2px solid rgb(37, 141, 148);
+    border-radius: 50px;
+    color: rgb(37, 141, 148);
+    background-color: transparent;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+aside button:hover {
+    color: white;
+}
+
+
+/* aisde is complate */
+
+section {
+    height: 120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(7, 102, 117);
+}
+
+.course-1 {
+    height: 80%;
+    width: 90%;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: rgb(7, 102, 117);
+    /* background-color: linear-gradient(135deg, rgb(37, 141, 148), rgb(7, 102, 117)); */
+}
+
+.fit {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fit h1 {
+    font-size: 30px;
+    width: 90%;
+    color: white;
+    font-weight: 600;
+    padding-left: 10px;
+    border-left: 4px solid rgb(37, 141, 148);
+}
+
+.fit-2 {
+    height: 100%;
+    width: 50%;
+    /* background-color: aliceblue; */
+    transition-property: app;
+    transition-duration: o.7s;
+    transition-timing-function: ease-in-out;
+    transition-delay: inherit;
+}
+
+.fit-2 :hover {
+    transform: scalex(1.1);
+    background-color: rgb(7, 102, 117);
+}
+
+.awer {
+    height: 10%;
+    width: 100%;
+    padding: 10px;
+    border: 0.4px solid white;
+    margin-top: 20px;
+    display: flex;
+    /* gap: 60px; */
+    border-radius: 10px;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 30px;
+    /* justify-content: space-around; */
+}
+
+.awer h1 {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.awer-2 {
+    height: 10%;
+    width: 100%;
+    border: 0.4px solid white;
+    margin-top: 20px;
+    display: flex;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    /* align-items: center; */
+    justify-content: center;
+    /* justify-content: space-around; */
+    gap: 30px;
+}
+
+.awer-2 h1 {
+    font-size: 16px;
+    font-weight: 600;
+    /* width: 90%; */
+}
+
+.awer-3 {
+    height: 10%;
+    width: 100%;
+    border: 0.4px solid white;
+    margin-top: 20px;
+    display: flex;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    align-items: center;
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    gap: 30px;
+}
+
+.awer-3 h1 {
+    font-size: 16px;
+    font-weight: 600;
+    /* width: 90%; */
+}
+
+.awer-4 {
+    height: 10%;
+    width: 100%;
+    border: 0.4px solid white;
+    margin-top: 10px;
+    display: flex;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    align-items: center;
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    gap: 30px;
+}
+
+.awer-4 h1 {
+    font-size: 16px;
+    font-weight: 600;
+    /* width: 90%; */
+}
+
+.awer-5 {
+    height: 10%;
+    width: 100%;
+    border: 0.4px solid white;
+    margin-top: 10px;
+    display: flex;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    align-items: center;
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    gap: 30px;
+}
+
+.awer-5 h1 {
+    font-size: 16px;
+    font-weight: 600;
+    /* width: 90%; */
+}
+
+
+/* section is fully complate */
+
+main {
+    height: 100%;
+    width: 100%;
+    background-image: url(https://melbetstratos.com/content_images/lrhNGb.jpg);
+    background-size: cover;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    position: relative;
+}
+
+.online {
+    height: 90%;
+    background-color: #fff;
+    width: 50%;
+    border-left: 4px solid rgb(37, 141, 148);
+    /* line-height: 1.3rem; */
+    border-radius: 10px;
+    box-shadow: 35px 35px 70px rgba(0, 0, 0, 0.12), -5px -5px 30px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    transform: translateX(15px) skewx(-2deg);
+    /* z-index: index 30; */
+    /* margin-top: 10px; */
+    margin-left: -80px;
+    transition: transform;
+    transition-duration: 5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.online:hover {
+    transform: translateX(10px) skewX(2deg);
+}
+
+.online h1 {
+    font-size: 40px;
+    font-weight: 500;
+    color: rgb(37, 141, 148);
+    position: relative;
+    padding: 30px;
+}
+
+.online h1::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    background-color: #000000;
+    bottom: 50px;
+    /* right: 10px; */
+    /* left: 2px; */
+    background-color: rgb(37, 141, 148);
+}
+
+.online p {
+    padding: 10px;
+    width: 90%;
+    line-height: 1.3rem;
+    font-size: 18px;
+}
+
+
+/* main is complatea */
+
+.review {
+    /* background-color: black; */
+    height: 100%;
+    background: rgb(96, 220, 210);
+}
+
+.review h1 {
+    position: relative;
+    text-align: center;
+    padding: 40px;
+    height: 10%;
+    font-weight: 600;
+    font-size: 40px;
+    color: rgb(37, 141, 148);
+    /* background-color: #fff; */
+}
+
+.review h1::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    background-color: rgb(37, 141, 148);
+    height: 3px;
+    bottom: 20px;
+    left: 720px;
+}
+
+.people-name {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 8px; */
+    justify-content: space-evenly;
+    height: 78%;
+    width: 90%;
+    margin-left: 4%;
+    /* background-color: #000000; */
+}
+
+.member {
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgb(6 6 6 / 50%);
+    width: 40%;
+    background-color: white;
+    transition: transfrom;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-delay: initial;
+}
+
+.member:hover {
+    transform: translateY(-10px);
+}
+
+.member-pic {
+    height: 100px;
+    width: 100px;
+    /* margin: 10px 250px; */
+    background-image: url(https://melbetstratos.com/content_images/IDSHvu.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 9999px;
+}
+
+.member h3 {
+    text-align: center;
+    color: rgb(37, 141, 148);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+.member p {
+    text-align: center;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 10px;
+    line-height: 1.5rem;
+}
+
+.member-pic2 {
+    height: 100px;
+    width: 100px;
+    margin: 10px 250px;
+    background-image: url(https://melbetstratos.com/content_images/LxeGhPy.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 9999px;
+}
+
+.member-pic3 {
+    height: 100px;
+    width: 100px;
+    margin: 10px 250px;
+    background-image: url(https://melbetstratos.com/content_images/qphetbn.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 9999px;
+}
+
+
+/* review is full complate */
+
+.plus {
+    height: 200vh;
+    background: radial-gradient(circle, rgb(7, 102, 117, 0.5) 0%, transparent 80%);
+    background-color: rgb(37, 141, 148);
+    position: relative;
+}
+
+.locking {
+    height: 20%;
+    width: 80%;
+    position: relative;
+    /* background-color: #c04343; */
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    left: 9%;
+    border-radius: 10px;
+    top: 10%;
+}
+
+.locking h1 {
+    /* padding: 10px; */
+    font-size: calc(28px* 1.5);
+    padding: 30px 150px;
+    /* margin: 0 auto; */
+}
+
+.locking h1::before {
+    content: "";
+    width: 5%;
+    position: absolute;
+    height: 3px;
+    right: 250px;
+    top: 52px;
+    background-color: rgb(37, 141, 148);
+}
+
+.locking ::after {
+    content: "";
+    width: 5%;
+    position: absolute;
+    height: 3px;
+    left: 55px;
+    top: 52px;
+    background: radial-gradient(circle, rgb(37, 141, 148, 0.5) 0%, transparent 80%);
+    background-color: rgb(37, 141, 148);
+}
+
+.locking p {
+    font-size: calc(17px* 1.1);
+    color: black;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.demo {
+    height: 60%;
+    width: 30%;
+    position: absolute;
+    border-radius: 20px;
+    top: 35%;
+    transform: rotate(-4deg);
+    left: 20%;
+    transform: transfrom;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: white;
+}
+
+.price {
+    height: 40%;
+    width: 100%;
+    background-image: url(https://melbetstratos.com/content_images/fkEXUxugQH.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.price::before {
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, rgb(37, 141, 148, 0.5), rgb(7, 102, 117, 0.5));
+    position: absolute;
+}
+
+.price::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    height: 30%;
+    /* background-color: #fff; */
+    background: linear-gradient(to top, #ffffff, transparent);
+}
+
+.demo p {
+    font-size: 17px;
+    color: #000000;
+    padding: 10px;
+    margin-bottom: 30px;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.demo h3::after {
+    content: "";
+    width: 70px;
+    top: 45px;
+    /* right: inherit; */
+    left: 0;
+    /* bottom: 0; */
+    height: 4px;
+    position: absolute;
+    background-color: rgb(37, 141, 148);
+    transition: transfrom;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.demo::after:hover {
+    width: 150px;
+}
+
+.demo:hover {
+    transform: translateX(2px);
+}
+
+.demo h3 {
+    font-size: calc(24px* 1.2);
+    color: #000000;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.demo-2 {
+    height: 60%;
+    width: 30%;
+    transform: rotate(-4deg);
+    position: absolute;
+    border-radius: 20px;
+    top: 35%;
+    transform: transfrom;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    left: 50%;
+    background-color: white;
+}
+
+.demo-2 h3 {
+    font-size: calc(24px* 1.2);
+    padding: 10px;
+    color: #000000;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+}
+
+.demo-2 p {
+    font-size: 17px;
+    color: #000000;
+    padding: 10px;
+    margin-bottom: 30px;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.demo-2 h1::after {
+    content: "";
+    width: 75px;
+    height: 4px;
+    bottom: 54%;
+    left: 17px;
+    position: absolute;
+    background-color: rgb(37, 141, 148);
+    transition: transfrom;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform-style: initial;
+}
+
+.demo-2::after :hover {
+    transform: translateX(2px);
+}
+
+.demo-2:hover {
+    transform: translateX(-2px);
+}
+
+.price-2 {
+    height: 40%;
+    width: 100%;
+    background-image: url(https://melbetstratos.com/content_images/qbVX.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.pric-2::before {
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, rgb(37, 141, 148, 0.5), rgb(7, 102, 117, 0.5));
+    position: absolute;
+}
+
+.price-2::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    height: 30%;
+    /* background-color: #fff; */
+    background: linear-gradient(to top, #ffffff, transparent);
+}
+
+
+/* .fastlimoosis :start */
+
+.fastlim {
+    height: 100rem;
+    /* background-color: aliceblue; */
+    background: rgb(37, 141, 148, 0.5);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    position: relative;
+    /* z-index: 100; */
+}
+
+.company {
+    margin-top: 30px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    /* z-index: 100; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
+    left: 120px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background-color: black;
+    background-color: rgb(37, 141, 148);
+}
+
+.company-1 {
+    height: 100%;
+    /* background-color: aqua; */
+    width: 30%;
+    /* display: flex; */
+    /* justify-content: center; */
+    background-image: url(https://melbetstratos.com/content_images/fjBN.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.company2 {
+    height: 100%;
+    background-color: white;
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.company2 h1 {
+    padding: 30px;
+    color: rgb(37, 141, 148);
+    font-weight: 600;
+    position: relative;
+}
+
+.company ::after {
+    content: "";
+    width: 100px;
+    position: absolute;
+    left: 30px;
+    /* top: ; */
+    bottom: 20px;
+    height: 2px;
+    background-color: rgb(96, 220, 210);
+}
+
+.company2 p {
+    text-align: center;
+    font-weight: 400;
+    line-height: 1rem;
+    width: 90%;
+    font-size: 14px;
+}
+
+
+/* company is complate */
+
+address {
+    height: 150%;
+    position: relative;
+    background-color: rgb(7, 102, 117);
+}
+
+.first {
+    height: 85%;
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 10%;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* margin: 50px 80px; */
+    background-color: rgb(37, 141, 148);
+    /* background-color: aquamarine; */
+}
+
+.last-pic {
+    width: 90%;
+    height: 50%;
+    margin-left: 40px;
+    background-image: url(https://melbetstratos.com/content_images/KwChv.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.first h1 {
+    font-size: 44px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 600;
+    /* width: 50%; */
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
+}
+
+.first p {
+    font-size: 15px;
+    /* width: 90%; */
+    margin-bottom: 40px;
+    opacity: 0.9;
+    color: #ffffff;
+    text-align: center;
+}
+
+.first ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 40px;
+}
+
+.first ul li {
+    line-height: 1.2rem;
+    font-size: larger;
+    font-weight: 600;
+    color: white;
+}
+
+.first ul h3 {
+    color: rgb(96, 220, 210);
+    font-size: 25px;
+}
+
+.note {
+    margin-left: 40px;
+}
+
+.note p {
+    width: 90%;
+    color: #ffffff;
+}
+
+.note h2 {
+    color: rgb(96, 220, 210);
+}
+
+
+/* footer is start  */
+
+footer {
+    height: 40%;
+    background-color: rgb(7, 102, 117);
+}
+
+.cookes {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 70%;
+}
+
+.cookes ul {
+    font-size: 25px;
+    list-style: none;
+    color: #ffffff;
+}
+
+.copy {
+    height: 30%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(96, 220, 210);
+}
+
+.copy h1 {
+    font-size: 20px;
+    color: #ffffff;
+}
